@@ -27,6 +27,18 @@ a {
     color: $color__gcm-green;
 }
 
+#uploaderContainer {
+    transition: .3s;
+    transform: scaleY(1);
+    transform-origin: top left;
+    opacity: 1;
+
+    &.hide {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+}
+
 .qq-uploader {
     border: 2px dashed $color__gray-light;
 }

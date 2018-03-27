@@ -48,6 +48,17 @@
             </div>
             <div class="card my-3">
                 <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="userName">Name</label>
+                            <input type="text" class="form-control" id="userName" name="userName" />
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail">Email</label>
+                            <input type="email" class="form-control" id="userEmail" name="userEmail" aria-describedby="userEmailHelp" />
+                            <small id="userEmailHelp" class="form-text text-muted">In case we need to contact you. We will never share this.</small>
+                        </div>
+                    </form>
                     <div id="uploaderContainer"></div>
                 </div>
             </div>
