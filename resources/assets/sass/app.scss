@@ -17,8 +17,9 @@ $color__white: #ffffff;
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-h1 {
+.title {
     font-family: "adobe-caslon-pro", serif;
+    font-size: 2rem;
     color: $color__gcm-blue2;
 }
 
@@ -29,12 +30,61 @@ a {
 .qq-uploader {
     border: 2px dashed $color__gray-light;
 }
-
 .qq-upload-button {
+    display: block;
+    float: none;
     background-color: $color__gcm-green;
     border: none;
-    border-radius: 3px;
+    border-radius: .25rem;
     font-weight: bold;
     color: $color__white;
     box-shadow: none;
+    width: 200px;
+}
+.qq-total-progress-bar-container {
+    display: block;
+    float: none;
+    margin-left: 0;
+    width: 100%;
+    display: none;
+}
+.qq-progress-bar {
+    background: $color__gcm-blue1;
+    width: 0%;
+    height: 15px;
+    border-radius: 6px;
+    margin: 0 0 1rem 0;
+
+    .qq-hide & {
+        height: 0;
+        margin: 0;
+    }
+}
+.qq-upload-list {
+    border-radius: .25rem;
+    box-shadow: none;
+    background: lighten($color__gray-light, 25%);
+
+    li {
+        background: none;
+    }
+}
+.qq-btn {
+    box-shadow: none;
+}
+.qq-upload-cancel {
+    background: $color__gcm-green;
+    color: $color__white;
+    border: none;
+    border-radius: .25rem;
+
+    &:hover {
+        background: darken($color__gcm-green, 15%);
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .title {
+        font-size: 3rem;
+    }
 }

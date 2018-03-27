@@ -3,11 +3,11 @@
 @section('content')
     <div class="px-3 py-3">
         <div class="container">
-            <div class="my-3">
-                <h1 class="display-4">My Video Testimony</h1>
+            <div class="m-3">
+                <h1 class="title">My Video Testimony</h1>
             </div>
-            <div class="row">
-                <div class="col-md">
+            <div class="card">
+                <div class="card-body">
                     <p class="lead">
                         Calling all disciples and disciple-makers!
                     </p>
@@ -15,30 +15,34 @@
                         Share a two-minute video explaining how God has blessed you
                         through disciple-making at Grace Church of Mentor.
                     </p>
-                    <ul>
-                        <li>
-                            Two minutes or less.
-                        </li>
-                        <li>
-                            Share how your spiritual mentor has influenced you.
-                        </li>
-                        <li>
-                            Share what a blessing it is to lead someone else through God’s Word.
-                        </li>
-                        <li>
-                            Share your gospel opportunities.
-                        </li>
-                        <li>
-                            First names only, please.
-                        </li>
-                        <li>
-                            Videos may be shared publicly, with our own church family and other churches.
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/261899646?color=7a9d4a&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <div class="row align-items-center">
+                        <div class="col-md order-lg-12 mb-sm-3 mb-lg-0">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/262054242" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-xl-6 d-none d-sm-block">
+                            <ul>
+                                <li>
+                                    Two minutes or less.
+                                </li>
+                                <li>
+                                    Share how your spiritual mentor has influenced you.
+                                </li>
+                                <li>
+                                    Share what a blessing it is to lead someone else through God’s Word.
+                                </li>
+                                <li>
+                                    Share your gospel opportunities.
+                                </li>
+                                <li>
+                                    First names only, please.
+                                </li>
+                                <li>
+                                    Videos may be shared publicly, with our own church family and other churches.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,19 +54,24 @@
         </div>
         <div class="m-3 text-center">
             <img src="https://s3.amazonaws.com/gcm-my-video-testimony/site-assets/gcm-logo-color-horizontal_trans-bg_594x284.png" alt="Grace Church of Mentor" width="200" />
+            <br/>
+            <p>
+                Questions?
+                <a href="https://gracechurchmentor.org/contact">Contact us</a>.
+            </p>
         </div>
     </div>
 
     <script type="text/template" id="qq-template">
         <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="Drop files here">
+            <div class="qq-upload-button-selector qq-upload-button">
+                <div>Upload a Video</div>
+            </div>
             <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
                 <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
             </div>
             <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
                 <span class="qq-upload-drop-area-text-selector"></span>
-            </div>
-            <div class="qq-upload-button-selector qq-upload-button">
-                <div>Upload a file</div>
             </div>
             <span class="qq-drop-processing-selector qq-drop-processing">
                 <span>Processing dropped files...</span>

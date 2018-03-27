@@ -13,7 +13,7 @@
     <link href="https://gracechurchmentor.org/templates/gcm/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 
     <!-- Styles -->
-    <link href="{{ mix('css/fine-uploader-new.min.css') }}" rel="stylesheet" />
+    <link href="css/s3.fine-uploader/fine-uploader-new.min.css" rel="stylesheet" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
 </head>
 <body>

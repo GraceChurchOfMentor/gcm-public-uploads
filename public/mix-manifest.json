@@ -2,5 +2,5 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/js/fineuploader.js": "/js/fineuploader.js",
-    "/css/fine-uploader-new.min.css": "/css/fine-uploader-new.min.css"
+    "/css/s3.fine-uploader": "/css/s3.fine-uploader"
 }

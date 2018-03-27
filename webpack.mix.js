@@ -15,4 +15,4 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
 
 mix.js('resources/assets/js/fineuploader.js', 'public/js');
-mix.copy('node_modules/fine-uploader/s3.fine-uploader/fine-uploader-new.min.css', 'public/css');
+mix.copyDirectory('node_modules/fine-uploader/s3.fine-uploader', 'public/css');
