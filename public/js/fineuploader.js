@@ -80,7 +80,7 @@ var qq = __webpack_require__(39);
 
 var uploader = new qq.s3.FineUploader({
     element: document.getElementById("uploaderContainer"),
-    debug: true,
+    debug: false,
     request: {
         endpoint: "https://gcm-my-video-testimony.s3.amazonaws.com",
         accessKey: "AKIAIE3JHWO6DPCNSFUA"

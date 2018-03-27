@@ -15,10 +15,30 @@
                         Share a two-minute video explaining how God has blessed you
                         through disciple-making at Grace Church of Mentor.
                     </p>
+                    <ul>
+                        <li>
+                            Two minutes or less.
+                        </li>
+                        <li>
+                            Share how your spiritual mentor has influenced you.
+                        </li>
+                        <li>
+                            Share what a blessing it is to lead someone else through God’s Word.
+                        </li>
+                        <li>
+                            Share your gospel opportunities.
+                        </li>
+                        <li>
+                            First names only, please.
+                        </li>
+                        <li>
+                            Videos may be shared publicly, with our own church family and other churches.
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-md">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/261724176" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/261899646?color=7a9d4a&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -27,6 +47,9 @@
                     <div id="uploaderContainer"></div>
                 </div>
             </div>
+        </div>
+        <div class="m-3 text-center">
+            <img src="https://s3.amazonaws.com/gcm-my-video-testimony/site-assets/gcm-logo-color-horizontal_trans-bg_594x284.png" alt="Grace Church of Mentor" width="200" />
         </div>
     </div>
 

@@ -1,9 +1,40 @@
+$color__gcm-green: rgb(122,157,74); // #88a672;
+$color__gcm-blue1: rgb(0,86,138); // #0c577d;
+$color__gcm-blue2: rgb(4,43,72); // #002f4a;
+$color__gray-light: desaturate(lighten($color__gcm-blue1, 40%), 75%);
+$color__gray: desaturate(lighten($color__gcm-blue1, 20%), 75%);
+$color__gray-dark: desaturate($color__gcm-blue2, 50%);
+$color__gcm-green-light: desaturate(lighten($color__gcm-green, 35%), 10%);
+$color__white: #ffffff;
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://use.typekit.net/zyj2mav.css");
 
 // Variables
 @import "variables";
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+h1 {
+    font-family: "adobe-caslon-pro", serif;
+    color: $color__gcm-blue2;
+}
+
+a {
+    color: $color__gcm-green;
+}
+
+.qq-uploader {
+    border: 2px dashed $color__gray-light;
+}
+
+.qq-upload-button {
+    background-color: $color__gcm-green;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    color: $color__white;
+    box-shadow: none;
+}

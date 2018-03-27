@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);/*!
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);@import url(https://use.typekit.net/zyj2mav.css);/*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -9992,5 +9992,28 @@ a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #ddd !important;
   }
+}
+
+h1 {
+  font-family: "adobe-caslon-pro", serif;
+  color: #042b48;
+}
+
+a {
+  color: #7a9d4a;
+}
+
+.qq-uploader {
+  border: 2px dashed #96b0c0;
+}
+
+.qq-upload-button {
+  background-color: #7a9d4a;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
