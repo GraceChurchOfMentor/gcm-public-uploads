@@ -21,8 +21,10 @@ function validateUserData() {
 function onFormChange() {
     if (validateUserData()) {
         document.getElementById("uploaderContainer").classList.remove("hide");
+        document.getElementById("uploaderHiddenMessage").classList.remove("show");
     } else {
         document.getElementById("uploaderContainer").classList.add("hide");
+        document.getElementById("uploaderHiddenMessage").classList.add("show");
     }
 }
 

@@ -27,7 +27,7 @@ a {
     color: $color__gcm-green;
 }
 
-#uploaderContainer {
+.uploader-container {
     transition: .3s;
     transform: scaleY(1);
     transform-origin: top left;
@@ -36,6 +36,15 @@ a {
     &.hide {
         opacity: 0;
         transform: scaleY(0);
+    }
+}
+.uploader-hidden-message {
+    opacity: 0;
+    height: 0;
+    transition: .3s;
+
+    &.show {
+        opacity: 1;
     }
 }
 

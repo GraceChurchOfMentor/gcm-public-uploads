@@ -59,7 +59,10 @@
                             <small id="userEmailHelp" class="form-text text-muted">In case we need to contact you. We will never share this.</small>
                         </div>
                     </form>
-                    <div id="uploaderContainer"></div>
+                    <div id="uploaderHiddenMessage" class="uploader-hidden-message">
+                        Upload field will appear once you provide your name and email address.
+                    </div>
+                    <div id="uploaderContainer" class="uploader-container"></div>
                 </div>
             </div>
         </div>
