@@ -1,4 +1,4 @@
-// Fine Uploader 5.16.0 - MIT licensed. http://fineuploader.com
+// Fine Uploader 5.16.2 - MIT licensed. http://fineuploader.com
 (function(global) {
     var qq = function(element) {
         "use strict";
@@ -585,7 +585,7 @@
         };
         qq.Error.prototype = new Error();
     })();
-    qq.version = "5.16.0";
+    qq.version = "5.16.2";
     qq.supportedFeatures = function() {
         "use strict";
         var supportsUploading, supportsUploadingBlobs, supportsFileDrop, supportsAjaxFileUploading, supportsFolderDrop, supportsChunking, supportsResume, supportsUploadViaPaste, supportsUploadCors, supportsDeleteFileXdr, supportsDeleteFileCorsXhr, supportsDeleteFileCors, supportsFolderSelection, supportsImagePreviews, supportsUploadProgress;
@@ -2727,7 +2727,7 @@
             return xhrOrXdr;
         }
         function getXhrOrXdr(id, suppliedXhr) {
-            var xhrOrXdr = requestData[id].xhr;
+            var xhrOrXdr = requestData[id] && requestData[id].xhr;
             if (!xhrOrXdr) {
                 if (suppliedXhr) {
                     xhrOrXdr = suppliedXhr;
@@ -3034,7 +3034,8 @@
                 if (responseToReport.reset) {
                     chunked.reset(id);
                 } else {
-                    inProgressIdx = qq.indexOf(handler._getFileState(id).chunking.inProgress, chunkIdx);
+                    var inProgressChunksArray = handler._getFileState(id).chunking.inProgress;
+                    inProgressIdx = inProgressChunksArray ? qq.indexOf(inProgressChunksArray, chunkIdx) : -1;
                     if (inProgressIdx >= 0) {
                         handler._getFileState(id).chunking.inProgress.splice(inProgressIdx, 1);
                         handler._getFileState(id).chunking.remaining.unshift(chunkIdx);
@@ -3213,7 +3214,12 @@
             }
         }, simple = {
             send: function(id, name) {
-                handler._getFileState(id).loaded = 0;
+                var fileState = handler._getFileState(id);
+                if (!fileState) {
+                    log("Ignoring send request as this upload may have been cancelled, File ID " + id, "warn");
+                    return;
+                }
+                fileState.loaded = 0;
                 log("Sending simple upload request for " + id);
                 handler.uploadFile(id).then(function(response, optXhr) {
                     log("Simple upload request succeeded for " + id);
@@ -3700,7 +3706,10 @@
         });
         qq.extend(this, {
             clearCachedChunk: function(id, chunkIdx) {
-                delete handler._getFileState(id).temp.cachedChunks[chunkIdx];
+                var fileState = handler._getFileState(id);
+                if (fileState) {
+                    delete fileState.temp.cachedChunks[chunkIdx];
+                }
             },
             clearXhr: function(id, chunkIdx) {
                 var tempState = handler._getFileState(id).temp;
@@ -3982,10 +3991,12 @@
             },
             _shouldChunkThisFile: function(id) {
                 var state = handler._getFileState(id);
-                if (!state.chunking) {
-                    handler.reevaluateChunking(id);
+                if (state) {
+                    if (!state.chunking) {
+                        handler.reevaluateChunking(id);
+                    }
+                    return state.chunking.enabled;
                 }
-                return state.chunking.enabled;
             }
         });
     };

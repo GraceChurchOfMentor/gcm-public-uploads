@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>My Video Testimony - Grace Church of Mentor</title>
+    <title>Upload Your Media - Grace Church of Mentor</title>
 
     <link href="https://gracechurchmentor.org/templates/gcm/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 

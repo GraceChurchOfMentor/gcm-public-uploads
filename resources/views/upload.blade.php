@@ -4,47 +4,7 @@
     <div class="px-3 py-3">
         <div class="container">
             <div class="m-3">
-                <h1 class="title">My Video Testimony</h1>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <p class="lead">
-                        Calling all disciples and disciple-makers!
-                    </p>
-                    <p>
-                        Share a two-minute video explaining how God has blessed you
-                        through disciple-making at Grace Church of Mentor.
-                    </p>
-                    <div class="row align-items-center">
-                        <div class="col-md order-lg-12 mb-sm-3 mb-lg-0">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/262054242" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-xl-6 d-none d-sm-block">
-                            <ul>
-                                <li>
-                                    Two minutes or less.
-                                </li>
-                                <li>
-                                    Share how your spiritual mentor has influenced you.
-                                </li>
-                                <li>
-                                    Share what a blessing it is to lead someone else through God’s Word.
-                                </li>
-                                <li>
-                                    Share your gospel opportunities.
-                                </li>
-                                <li>
-                                    First names only, please.
-                                </li>
-                                <li>
-                                    Videos may be shared publicly, with our own church family and other churches.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <h1 class="title text-center">Upload Your Media</h1>
             </div>
             <div class="card my-3">
                 <div class="card-body">
@@ -58,9 +18,13 @@
                             <input type="email" class="form-control" id="userEmail" name="userEmail" aria-describedby="userEmailHelp" />
                             <small id="userEmailHelp" class="form-text text-muted">In case we need to contact you. We will never share this.</small>
                         </div>
+                        <div class="form-group">
+                            <label for="contentDescription">Describe your content</label>
+                            <input type="text" class="form-control" id="contentDescription" name="contentDescription" placeholder="e.g., &ldquo;Missions Trip Photos&rdquo;" maxlength="32" />
+                        </div>
                     </form>
                     <div id="uploaderHiddenMessage" class="uploader-hidden-message">
-                        Upload field will appear once you provide your name and email address.
+                        Upload field will appear once you provide your name, email address and description.
                     </div>
                     <div id="uploaderContainer" class="uploader-container"></div>
                 </div>
@@ -79,7 +43,7 @@
     <script type="text/template" id="qq-template">
         <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="Drop files here">
             <div class="qq-upload-button-selector qq-upload-button">
-                <div>Upload a Video</div>
+                <div>Select file(s)</div>
             </div>
             <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
                 <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
@@ -133,6 +97,12 @@
                 </div>
             </dialog>
         </div>
+    </script>
+    <script>
+        var fineUploaderS3Endpoint = "{{ env("S3_ENDPOINT") }}";
+        var fineUploaderAWSClientPublicKey = "{{ env("AWS_CLIENT_PUBLIC_KEY") }}";
+        var fineUploaderS3BucketRegion = "{{ env("S3_BUCKET_REGION") }}";
+        var fineUploaderS3BucketName = "{{ env("S3_BUCKET_NAME") }}";
     </script>
     <script src="{{ mix('js/fineuploader.js') }}"></script>
 @endsection
