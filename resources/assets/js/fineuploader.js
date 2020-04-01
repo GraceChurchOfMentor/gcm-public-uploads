@@ -132,6 +132,19 @@ const uploader = new qq.s3.FineUploader({
             });
         },
         onAllComplete: function(succeeded, failed) {
+            let successMessage = "",
+                failMessage = "";
+
+            if (succeeded.length > 0) {
+                successMessage = `${succeeded.length} file(s) uploaded successfully!`;
+            }
+            if (failed.length > 0) {
+                failMessage = `${failed.length} file(s) failed.`;
+            }
+
+            $('#statusModalMessage').text(`${successMessage} ${failMessage}`);
+            $('#statusModal').modal();
+
             axios.post('/notify/email', {
                 'userName': userNameElement.value,
                 'userEmail': userEmailElement.value,

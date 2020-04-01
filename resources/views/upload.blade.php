@@ -105,4 +105,17 @@
         var fineUploaderS3BucketName = "{{ env("S3_BUCKET_NAME") }}";
     </script>
     <script src="{{ mix('js/fineuploader.js') }}"></script>
+
+    <div id="statusModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p id="statusModalMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Okay</button>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
